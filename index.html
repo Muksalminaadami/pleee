@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>VANGUARD — World-Class Digital Collective</title>
+
+<script src="https://cdn.tailwindcss.com"></script>
+
+<style>
+  @font-face {
+    font-family: 'Podium';
+    src: url('https://db.onlinewebfonts.com/c/8b75d9dcff6a48c35a46656192adf019?family=FSP+DEMO+-+PODIUM+Sharp+4.11');
+    font-weight: normal;
+    font-style: normal;
+  }
+</style>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+<script>
+  tailwind.config = {
+    theme: {
+      extend: {
+        fontFamily: {
+          podium: ['Podium', 'sans-serif'],
+          inter: ['Inter', 'sans-serif'],
+        },
+      }
+    }
+  }
+</script>
+
+<style type="text/tailwindcss">
+  @layer utilities {
+    @keyframes fade-up {
+      from { opacity: 0; transform: translateY(30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .animate-fade-up {
+      opacity: 0;
+      animation: fade-up 0.9s ease-out forwards;
+      animation-delay: 0s;
+    }
+    .animate-fade-up-delay-1 {
+      opacity: 0;
+      animation: fade-up 0.9s ease-out forwards;
+      animation-delay: 0.2s;
+    }
+    .animate-fade-up-delay-2 {
+      opacity: 0;
+      animation: fade-up 0.9s ease-out forwards;
+      animation-delay: 0.4s;
+    }
+    .animate-fade-up-delay-3 {
+      opacity: 0;
+      animation: fade-up 0.9s ease-out forwards;
+      animation-delay: 0.6s;
+    }
+    .animate-fade-up-delay-4 {
+      opacity: 0;
+      animation: fade-up 0.9s ease-out forwards;
+      animation-delay: 0.8s;
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      .animate-fade-up,
+      .animate-fade-up-delay-1,
+      .animate-fade-up-delay-2,
+      .animate-fade-up-delay-3,
+      .animate-fade-up-delay-4 {
+        animation: none;
+        opacity: 1;
+      }
+    }
+  }
+</style>
+</head>
+
+<body class="bg-black font-inter overflow-x-hidden">
+
+<section class="relative h-screen w-full overflow-hidden">
+
+  <!-- Background video -->
+  <video
+    class="absolute inset-0 w-full h-full object-cover"
+    autoplay muted loop playsinline
+    src="https://d8j0ntlcm91z4.cloudfront.net/user_38xzZboKViGWJOttwIXH07lWA1P/hf_20260606_154941_df1a96e1-a06f-450c-bd02-d863414cc1a0.mp4">
+  </video>
+
+  <!-- Darkening overlay for legibility -->
+  <div class="absolute inset-0 bg-black/40"></div>
+
+  <!-- Content wrapper -->
+  <div class="relative z-10 h-full flex flex-col">
+
+    <!-- Navbar -->
+    <nav class="flex items-center justify-between px-6 sm:px-10 lg:px-16 py-5 lg:py-7">
+      <a href="#" class="font-podium text-white font-bold uppercase text-2xl sm:text-3xl tracking-wider">
+        VANGUARD
+      </a>
+
+      <div class="hidden md:flex items-center gap-10">
+        <a href="#" class="font-inter text-sm text-white/80 tracking-widest uppercase hover:text-white transition">Projects</a>
+        <a href="#" class="font-inter text-sm text-white/80 tracking-widest uppercase hover:text-white transition">Studio</a>
+        <a href="#" class="font-inter text-sm text-white/80 tracking-widest uppercase hover:text-white transition">Offerings</a>
+        <a href="#" class="font-inter text-sm text-white/80 tracking-widest uppercase hover:text-white transition">Inquire</a>
+      </div>
+
+      <a href="#" class="hidden md:inline-flex items-center gap-2 border border-white/30 hover:border-white/60 hover:bg-white/10 px-6 py-3 text-xs tracking-widest uppercase text-white transition">
+        Get In Touch
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-4 h-4">
+          <line x1="7" y1="17" x2="17" y2="7"></line>
+          <polyline points="7 7 17 7 17 17"></polyline>
+        </svg>
+      </a>
+
+      <button id="menu-btn" class="md:hidden flex flex-col items-end space-y-1.5" aria-label="Open menu">
+        <div class="w-6 h-0.5 bg-white"></div>
+        <div class="w-6 h-0.5 bg-white"></div>
+        <div class="w-4 h-0.5 bg-white"></div>
+      </button>
+    </nav>
+
+    <!-- Hero content -->
+    <div class="flex-1 flex flex-col justify-center px-6 sm:px-10 lg:px-16">
+      <div class="max-w-3xl">
+
+        <!-- Tagline -->
+        <div class="animate-fade-up flex items-center gap-2 mb-6 lg:mb-8">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-4 h-4 text-white/70">
+            <path d="M2 4l3 12h14l3-12-6 7-4-7-4 7-6-7z"></path>
+          </svg>
+          <span class="font-inter text-white/70 text-xs sm:text-sm tracking-[0.3em] uppercase">
+            World-Class Digital Collective
+          </span>
+        </div>
+
+        <!-- Heading -->
+        <h1 class="animate-fade-up-delay-1 font-podium text-white uppercase leading-[0.92] tracking-tight">
+          <span class="block text-[clamp(2.8rem,8vw,7rem)]">Design.</span>
+          <span class="block text-[clamp(2.8rem,8vw,7rem)]">Disrupt.</span>
+          <span class="block text-[clamp(2.8rem,8vw,7rem)]">Conquer.</span>
+        </h1>
+
+        <!-- Subtext -->
+        <p class="animate-fade-up-delay-2 mt-6 lg:mt-8 font-inter text-white/70 text-sm sm:text-base leading-relaxed max-w-md">
+          We build fierce brand identities<br>
+          that don't just turn heads — <span class="font-bold text-white">they lead.</span>
+        </p>
+
+        <!-- CTA Row -->
+        <div class="animate-fade-up-delay-3 mt-8 lg:mt-10 flex flex-wrap items-center gap-4 sm:gap-6">
+          <a href="#" class="group inline-flex items-center gap-2 bg-black hover:bg-neutral-900 text-white px-5 sm:px-7 py-3 sm:py-4 text-[11px] sm:text-xs tracking-widest uppercase transition">
+            See Our Work
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-4 h-4 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5">
+              <line x1="7" y1="17" x2="17" y2="7"></line>
+              <polyline points="7 7 17 7 17 17"></polyline>
+            </svg>
+          </a>
+
+          <div class="hidden sm:flex items-center gap-3">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="w-8 h-8 text-white/50">
+              <circle cx="12" cy="8" r="6"></circle>
+              <path d="M15.5 13.5L17 22l-5-3-5 3 1.5-8.5"></path>
+            </svg>
+            <div class="font-inter text-white/60 text-xs tracking-wider uppercase leading-tight">
+              <div>Top-Rated</div>
+              <div>Brand Studio</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Stats Row -->
+        <div class="animate-fade-up-delay-4 mt-8 sm:mt-10 lg:mt-14 flex flex-wrap gap-6 sm:gap-12 lg:gap-16">
+          <div>
+            <div class="font-inter text-white text-2xl sm:text-4xl lg:text-5xl font-bold tracking-tight">250+</div>
+            <div class="font-inter text-white/50 text-[9px] sm:text-xs tracking-widest uppercase mt-1">Brands Transformed</div>
+          </div>
+          <div>
+            <div class="font-inter text-white text-2xl sm:text-4xl lg:text-5xl font-bold tracking-tight">95%</div>
+            <div class="font-inter text-white/50 text-[9px] sm:text-xs tracking-widest uppercase mt-1">Client Retention</div>
+          </div>
+          <div>
+            <div class="font-inter text-white text-2xl sm:text-4xl lg:text-5xl font-bold tracking-tight">10+</div>
+            <div class="font-inter text-white/50 text-[9px] sm:text-xs tracking-widest uppercase mt-1">Years in the Game</div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+</section>
+
+<!-- Mobile Menu Overlay -->
+<div id="mobile-menu" class="fixed inset-0 z-50 bg-black/95 backdrop-blur-sm opacity-0 invisible transition-all duration-500 flex flex-col">
+
+  <div class="flex items-center justify-between px-6 sm:px-10 py-5">
+    <span class="font-podium text-white font-bold uppercase text-2xl sm:text-3xl tracking-wider">VANGUARD</span>
+    <button id="close-btn" aria-label="Close menu">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-7 h-7 text-white">
+        <line x1="18" y1="6" x2="6" y2="18"></line>
+        <line x1="6" y1="6" x2="18" y2="18"></line>
+      </svg>
+    </button>
+  </div>
+
+  <div class="flex-1 flex flex-col items-center justify-center gap-6">
+    <a href="#" data-i="0" class="mobile-link font-podium text-4xl sm:text-5xl text-white uppercase opacity-0 -translate-y-2 transition-all duration-500" style="transition-delay: calc(0 * 80ms + 100ms);">Projects</a>
+    <a href="#" data-i="1" class="mobile-link font-podium text-4xl sm:text-5xl text-white uppercase opacity-0 -translate-y-2 transition-all duration-500" style="transition-delay: calc(1 * 80ms + 100ms);">Studio</a>
+    <a href="#" data-i="2" class="mobile-link font-podium text-4xl sm:text-5xl text-white uppercase opacity-0 -translate-y-2 transition-all duration-500" style="transition-delay: calc(2 * 80ms + 100ms);">Offerings</a>
+    <a href="#" data-i="3" class="mobile-link font-podium text-4xl sm:text-5xl text-white uppercase opacity-0 -translate-y-2 transition-all duration-500" style="transition-delay: calc(3 * 80ms + 100ms);">Inquire</a>
+
+    <a href="#" class="mobile-link mt-6 inline-flex items-center gap-2 border border-white/30 hover:border-white/60 hover:bg-white/10 px-6 py-3 text-xs tracking-widest uppercase text-white transition opacity-0 -translate-y-2 duration-500" style="transition-delay: calc(4 * 80ms + 100ms);">
+      Get In Touch
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-4 h-4">
+        <line x1="7" y1="17" x2="17" y2="7"></line>
+        <polyline points="7 7 17 7 17 17"></polyline>
+      </svg>
+    </a>
+  </div>
+
+</div>
+
+<script>
+  const menuBtn = document.getElementById('menu-btn');
+  const closeBtn = document.getElementById('close-btn');
+  const mobileMenu = document.getElementById('mobile-menu');
+  const mobileLinks = document.querySelectorAll('.mobile-link');
+
+  function openMenu() {
+    mobileMenu.classList.remove('opacity-0', 'invisible');
+    mobileMenu.classList.add('opacity-100', 'visible');
+    mobileLinks.forEach(link => {
+      link.classList.remove('opacity-0', '-translate-y-2');
+      link.classList.add('opacity-100', 'translate-y-0');
+    });
+  }
+
+  function closeMenu() {
+    mobileMenu.classList.remove('opacity-100', 'visible');
+    mobileMenu.classList.add('opacity-0', 'invisible');
+    mobileLinks.forEach(link => {
+      link.classList.add('opacity-0', '-translate-y-2');
+      link.classList.remove('opacity-100', 'translate-y-0');
+    });
+  }
+
+  menuBtn.addEventListener('click', openMenu);
+  closeBtn.addEventListener('click', closeMenu);
+  mobileLinks.forEach(link => link.addEventListener('click', closeMenu));
+</script>
+
+</body>
+</html>
